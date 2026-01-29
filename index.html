@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quadratic Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">Math Visualization Module</p>
+      <h1>Interactive Quadratic Explorer</h1>
+      <p class="subtitle">
+        Adjust the coefficients and watch the parabola, derivative, and key points update in real time.
+      </p>
+    </header>
+
+    <section class="content">
+      <div class="panel">
+        <canvas id="graph" width="720" height="420" aria-label="Quadratic graph"></canvas>
+        <div class="legend">
+          <div><span class="swatch parabola"></span>Quadratic</div>
+          <div><span class="swatch derivative"></span>Derivative</div>
+          <div><span class="swatch highlight"></span>Vertex / Roots</div>
+        </div>
+      </div>
+
+      <aside class="controls">
+        <div class="card">
+          <h2>Equation</h2>
+          <p class="equation" id="equation">y = ax² + bx + c</p>
+        </div>
+
+        <div class="card">
+          <h3>Adjust coefficients</h3>
+          <label>
+            a: <span id="a-value">1.0</span>
+            <input id="a" type="range" min="-3" max="3" step="0.1" value="1" />
+          </label>
+          <label>
+            b: <span id="b-value">0.0</span>
+            <input id="b" type="range" min="-6" max="6" step="0.1" value="0" />
+          </label>
+          <label>
+            c: <span id="c-value">0.0</span>
+            <input id="c" type="range" min="-8" max="8" step="0.1" value="0" />
+          </label>
+        </div>
+
+        <div class="card">
+          <h3>Key values</h3>
+          <ul class="stats">
+            <li>
+              <span>Vertex</span>
+              <strong id="vertex">(0, 0)</strong>
+            </li>
+            <li>
+              <span>Axis of symmetry</span>
+              <strong id="axis">x = 0</strong>
+            </li>
+            <li>
+              <span>Roots</span>
+              <strong id="roots">No real roots</strong>
+            </li>
+            <li>
+              <span>Derivative</span>
+              <strong id="derivative">y = 0</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card toggle">
+          <label>
+            <input id="show-derivative" type="checkbox" checked />
+            Show derivative line
+          </label>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

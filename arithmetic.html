@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunny Arithmetic Playground</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">Math Visualization Module</p>
+      <h1>Sunny Arithmetic Playground</h1>
+      <p class="subtitle">
+        Practice friendly addition and subtraction. Pick a level, solve the problem, and collect stars!
+      </p>
+    </header>
+
+    <section class="content">
+      <div class="panel game-panel">
+        <div class="problem" aria-live="polite">
+          <span id="first">3</span>
+          <span id="operator">+</span>
+          <span id="second">5</span>
+          <span class="equals">=</span>
+          <input id="answer" type="number" inputmode="numeric" placeholder="?" aria-label="Answer" />
+          <button id="check" class="btn primary">Check</button>
+        </div>
+        <p id="feedback" class="feedback">Ready? Let’s go!</p>
+
+        <div class="number-line" aria-hidden="true">
+          <div class="line"></div>
+          <div class="ticks">
+            <span>0</span>
+            <span>5</span>
+            <span>10</span>
+            <span>15</span>
+            <span>20</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="controls">
+        <div class="card">
+          <h2>Level</h2>
+          <div class="choices" role="group" aria-label="Level">
+            <button class="pill active" data-range="10">0–10</button>
+            <button class="pill" data-range="20">0–20</button>
+            <button class="pill" data-range="50">0–50</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Choose an operation</h3>
+          <div class="choices" role="group" aria-label="Operation">
+            <button class="pill active" data-operation="add">Addition</button>
+            <button class="pill" data-operation="subtract">Subtraction</button>
+            <button class="pill" data-operation="mix">Mix</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Your progress</h3>
+          <ul class="stats">
+            <li>
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </li>
+            <li>
+              <span>Streak</span>
+              <strong id="streak">0</strong>
+            </li>
+            <li>
+              <span>Stars</span>
+              <strong id="stars" class="stars">☆ ☆ ☆ ☆ ☆</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card tip">
+          <h3>Tip</h3>
+          <p id="tip">Try counting on your fingers or jump along the number line.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="arithmetic.js"></script>
+</body>
+</html>
