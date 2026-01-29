@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bubble Pop Party</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header class="game__header">
+        <div>
+          <h1>Bubble Pop Party</h1>
+          <p class="game__subtitle">Pop the bubbles before time runs out!</p>
+        </div>
+        <div class="game__stats" aria-live="polite">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Time: <strong id="time">30</strong>s</span>
+        </div>
+      </header>
+
+      <section class="game__controls" aria-label="Game controls">
+        <button id="start" class="button button--primary">Start Game</button>
+        <button id="pause" class="button" disabled>Pause</button>
+        <button id="reset" class="button" disabled>Reset</button>
+      </section>
+
+      <section class="game__stage" aria-label="Bubble popping play area">
+        <div id="stage" class="stage" role="application"></div>
+      </section>
+
+      <section class="game__instructions" aria-label="How to play">
+        <h2>How to play</h2>
+        <ol>
+          <li>Press <strong>Start Game</strong>.</li>
+          <li>Tap or click the bubbles as they appear.</li>
+          <li>Try to beat your best score before the timer ends!</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Made for curious kids with bright bubbles and happy sounds (if enabled).
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
