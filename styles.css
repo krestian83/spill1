@@ -162,3 +162,112 @@ input[type="range"] {
     grid-template-columns: 1fr;
   }
 }
+
+.game-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.problem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fbd46d;
+}
+
+.problem input {
+  width: 120px;
+  padding: 10px 12px;
+  font-size: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(251, 212, 109, 0.5);
+  background: rgba(7, 12, 22, 0.9);
+  color: #f2f5f9;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(130deg, #6ee7ff, #8fa8ff);
+  color: #0c111b;
+}
+
+.feedback {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #b9c6e3;
+}
+
+.feedback.success {
+  color: #7cffaf;
+}
+
+.feedback.error {
+  color: #ff9f6e;
+}
+
+.number-line {
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  padding: 20px 12px 0;
+}
+
+.number-line .line {
+  height: 6px;
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+}
+
+.number-line .ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #b3c2e8;
+  margin-top: 10px;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 8px 16px;
+  background: rgba(12, 18, 32, 0.65);
+  color: #e8eefc;
+  cursor: pointer;
+}
+
+.pill.active {
+  background: rgba(110, 231, 255, 0.25);
+  border-color: #6ee7ff;
+  color: #fbd46d;
+}
+
+.tip {
+  font-size: 0.95rem;
+  color: #b9c6e3;
+}
+
+.stars {
+  letter-spacing: 0.2em;
+}
